@@ -1,0 +1,16 @@
+﻿<Window x:Class="TulingGongkong.Subforms.Suggestion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TulingGongkong.Subforms"
+        mc:Ignorable="d"
+        Title="Suggestion" Height="350" Width="300">
+    <StackPanel Background="LightBlue">
+        <Label Margin="10" Content="Suggestion Description" HorizontalAlignment="Center" FontSize="16"/>
+        <TextBlock Margin="10" TextWrapping="WrapWithOverflow" Foreground="DarkBlue" HorizontalAlignment="Center"
+                 Text="Please give us some feedback on Tuling's Course,You are welcome to submit your suggestions."/>
+        <TextBox Margin="10" Height="120"></TextBox>
+        <Button Margin="10" Content="Submit" Background="Bisque" Foreground="Brown"></Button>
+    </StackPanel>
+</Window>

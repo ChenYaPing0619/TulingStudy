@@ -1,0 +1,25 @@
+﻿<Window x:Class="TulingGongkong.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TulingGongkong"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:uc="clr-namespace:TulingGongkong.uc"
+        xmlns:subforms="clr-namespace:TulingGongkong.Subforms"
+        
+        mc:Ignorable="d"
+        Title="{x:Static local:MainWindow.AppTitle}"  Height="300" Width="500
+        ">
+    <Grid>
+        <StackPanel Background="LightBlue">
+            <Label Margin="10" Content="User Experience Feedback" HorizontalAlignment="Center" FontSize="16"/>
+            <TextBlock Margin="10" TextWrapping="WrapWithOverflow" Foreground="DarkBlue" HorizontalAlignment="Center"
+                       Text="Thanks you for you support of our course,please click the button below. 
+                       The direction you want to evalution or the suggestion"/>
+            <uc:TulingButton Width="100" Margin="10" Content="Suggestion" Background="Bisque" Foreground="Brown" SubWindow="{x:Type subforms:Suggestion}" ></uc:TulingButton>
+            <uc:TulingButton Width="100" Margin="10" Content="Evaluation" Background="Bisque" Foreground="Brown" SubWindow="{x:Type subforms:Evalution}"></uc:TulingButton>
+
+        </StackPanel>
+    </Grid>
+</Window>

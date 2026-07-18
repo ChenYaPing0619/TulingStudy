@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\anniu_guanbi.png" />
+    <None Remove="Images\bilibili-word.png" />
+    <None Remove="Images\bilibili.png" />
+    <None Remove="Images\QQ.png" />
+    <None Remove="Images\weibo.png" />
+    <None Remove="Images\weixin.png" />
+    <None Remove="Images\yonghu.png" />
+    <None Remove="Images\密码.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\anniu_guanbi.png" />
+    <Resource Include="Images\bilibili-word.png" />
+    <Resource Include="Images\bilibili.png" />
+    <Resource Include="Images\QQ.png" />
+    <Resource Include="Images\weibo.png" />
+    <Resource Include="Images\weixin.png" />
+    <Resource Include="Images\yonghu.png" />
+    <Resource Include="Images\密码.png" />
+  </ItemGroup>
+
+</Project>
