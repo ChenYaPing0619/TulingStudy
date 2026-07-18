@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="BiliBiliLogin/BiliBiliLogin.csproj" Id="6c4d622a-9a4d-4728-bde9-02860b7b1ca1" />
+  <Project Path="Binding/BindingDemo.csproj" Id="62aced44-13da-44a8-ac07-9f2edbc5f5cd" />
+  <Project Path="PropertyDemo/PropertyDemo.csproj" Id="21ddf8a8-05b8-4619-ae9a-e7913b9dfb67" />
+  <Project Path="RouterDemo/RouterDemo.csproj" Id="2378bc6f-769d-4642-9ed2-dcfe570e5f1c" />
+  <Project Path="TulingGongkong/TulingGongkong.csproj" />
+</Solution>

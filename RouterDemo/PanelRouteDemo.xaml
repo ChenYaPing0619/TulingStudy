@@ -1,0 +1,42 @@
+<Window x:Class="RouterDemo.PanelRouteDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RouterDemo"
+        mc:Ignorable="d"
+        Title="面板统一监听按钮点击" Height="460" Width="860">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="场景：一个面板里很多按钮，不给每个按钮单独写 Click，在父容器统一处理。" Margin="0,0,0,10"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border x:Name="ButtonPanel" Grid.Column="0" Padding="12" BorderBrush="Gray" BorderThickness="1">
+                <UniformGrid Rows="3" Columns="2">
+                    <Button Content="启动设备" Tag="Start" Margin="6" Height="38"/>
+                    <Button Content="停止设备" Tag="Stop" Margin="6" Height="38"/>
+                    <Button Content="复位报警" Tag="ResetAlarm" Margin="6" Height="38"/>
+                    <Button Content="确认报警" Tag="AckAlarm" Margin="6" Height="38"/>
+                    <Button Content="切手动" Tag="Manual" Margin="6" Height="38"/>
+                    <Button Content="切自动" Tag="Auto" Margin="6" Height="38"/>
+                </UniformGrid>
+            </Border>
+
+            <GroupBox Grid.Column="1" Header="统一处理日志" Margin="12,0,0,0">
+                <DockPanel>
+                    <TextBlock x:Name="ActionText" DockPanel.Dock="Top" Margin="8" FontWeight="SemiBold" Text="最近动作：无"/>
+                    <ListBox x:Name="LogList" Margin="8,0,8,8"/>
+                </DockPanel>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Window>

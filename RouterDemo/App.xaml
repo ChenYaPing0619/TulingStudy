@@ -1,0 +1,9 @@
+﻿<Application x:Class="RouterDemo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:RouterDemo"
+             StartupUri="PanelRouteDemo.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

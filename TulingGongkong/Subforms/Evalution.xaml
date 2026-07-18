@@ -1,0 +1,23 @@
+﻿<Window x:Class="TulingGongkong.Subforms.Evalution"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TulingGongkong.Subforms"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        mc:Ignorable="d"
+        Title="Evalution" Height="250" Width="300">
+    <StackPanel Background="LightBlue">
+        <Label Margin="10" Content="Evalution" HorizontalAlignment="Center" FontSize="16"/>
+        <TextBlock Margin="10" TextWrapping="WrapWithOverflow" Foreground="DarkBlue" HorizontalAlignment="Center"
+                 Text="Please give us some feedback on Tuling's Course,You are welcome to submit your suggestions."/>
+        <StackPanel Orientation="Horizontal">
+            <hc:Rate Margin="10" Value="4.0"  AllowHalf="True" ShowText="True"
+                     Foreground="{DynamicResource ResourceKey=DangerBrush}"
+                     Icon="{StaticResource ResourceKey=SuccessGeometry}" />
+
+
+            <Button Margin="10" Content="Submit" Background="Bisque" Foreground="Brown"></Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

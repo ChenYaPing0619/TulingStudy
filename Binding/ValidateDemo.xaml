@@ -1,0 +1,16 @@
+﻿<Window x:Class="BindingDemo.ValidateDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BindingDemo"
+        mc:Ignorable="d"
+        Title="ValidateDemo" Height="450" Width="800">
+    <Grid>
+        <!--将控件作为绑定源，使用ElementName属性指定绑定源元素的名称，Path属性指定绑定源元素的属性。-->
+        <StackPanel>
+            <TextBox Name="SliderValue"/>
+            <Slider Name="SliderControl" Minimum="0" Maximum="100" Value="50"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,107 @@
+﻿<Window x:Class="BiliBiliLogin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BiliBiliLogin"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="ButtonParent" TargetType="Button">
+            <Setter Property="FontWeight" Value="ExtraBlack"/>
+        </Style>
+        <Style x:Key="ButtonChild" TargetType="Button" BasedOn="{StaticResource ButtonParent}">
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.35*"/>
+            <ColumnDefinition Width="0.65*"/>
+        </Grid.ColumnDefinitions>
+        <!--左侧布局实现-->
+        <Grid Grid.Column="0">
+            <!--左侧内容-->
+            <Border CornerRadius="10,0,0,10">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#00999A" Offset="0"/>
+                        <GradientStop Color="#0072c0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <StackPanel>
+                <TextBlock Margin="0,100,0,30" Text="BiliBili" FontWeight="Bold" Foreground="White"
+                           FontSize="32" TextAlignment="Center" >
+                </TextBlock>
+                <TextBlock Margin="20,0,20,0" Foreground="White" TextAlignment="Center" LineHeight="25px"
+                           TextWrapping="WrapWithOverflow" 
+                           Text="Welcom to Bilibili,you can register by clicking the button below.">
+                </TextBlock>
+                <!--应用样式资源-->
+                <Button Margin="0,80,0,0" Style="{StaticResource ButtonChild}" Content="Sign UP"  FontWeight="Bold"  Width="100" Background="Transparent" BorderBrush="White"/>
+            </StackPanel>
+            <Canvas>
+                <Image Source="/Images/bilibili-word.png" Width="120" Height="99" Canvas.Bottom="5" Canvas.Left="73" Canvas.Top="350"></Image>
+            </Canvas>
+        </Grid>
+        <!--右侧布局实现-->
+        <Grid Grid.Column="1">
+            <!--右侧内容-->
+            <Border CornerRadius="0,10,10,0" Background="WhiteSmoke" />
+            <StackPanel>
+                <Canvas>
+                    <Button Canvas.Right="5" Canvas.Top="5" Background="Transparent" BorderBrush="Transparent" Click="Button_Click">
+                        <Image Source="/Images/anniu_guanbi.png" Width="20" Height="20" ></Image>
+                    </Button>
+                </Canvas>
+                <TextBlock Margin="0,50,0,20" Text="Sign in to Bilibili" Foreground="#0072c0" 
+                           TextAlignment="Center" FontSize="32" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button BorderBrush="Transparent" Background="Transparent">
+                        <Image Source="/Images/weixin.png" Height="50" Width="50"></Image>
+                    </Button>
+                    <Button Margin="20,0,20,0" BorderBrush="Transparent" Background="Transparent">
+                        <Image Source="/Images/QQ.png" Height="50" Width="50"></Image>
+                    </Button>
+                    <Button BorderBrush="Transparent" Background="Transparent">
+                        <Image Source="/Images/weibo.png" Height="50" Width="50"></Image>
+                    </Button>
+                </StackPanel>
+                <TextBlock Margin="20,20,20,10" TextAlignment="Center" Foreground="#1296DB" FontSize="14" TextWrapping="WrapWithOverflow"
+                           Text="or use your phone number to sign in."/>
+                <Border BorderThickness="1" CornerRadius="10" BorderBrush="#878787" Height="35" Width="350">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <Ellipse Width="25" Height="25" Margin="5,0,0,0">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/Images/yonghu.png"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <TextBox Margin="5,0,0,0" Width="300" BorderThickness="0" Background="Transparent" 
+                                 HorizontalAlignment="Left" VerticalAlignment="Center"
+                                 Text="Username" Foreground="#878787" FontSize="20"/>
+                    </StackPanel>
+                </Border>
+                <Border Margin="0,10,0,0" BorderThickness="1" CornerRadius="10" BorderBrush="#878787" Height="35" Width="350">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <Ellipse Width="25" Height="25" Margin="5,0,0,0">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/Images/密码.png"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <TextBox Margin="5,0,0,0" Width="300" BorderThickness="0" Background="Transparent" 
+                  HorizontalAlignment="Left" VerticalAlignment="Center"
+                  Text="Password" Foreground="#878787" FontSize="20"/>
+                    </StackPanel>
+                </Border>
+                <Button Margin="0,20,0,0" Content="Sign In" FontWeight="Bold" Foreground="White" Width="150" Height="35" Background="#0072c0" />
+                
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

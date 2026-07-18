@@ -1,0 +1,15 @@
+﻿<Application x:Class="BiliBiliLogin.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BiliBiliLogin"
+             StartupUri="ControlTemplateDemo.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourseDictionaryDemo.xaml"/>
+                <ResourceDictionary Source="/ResourceBtn.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
